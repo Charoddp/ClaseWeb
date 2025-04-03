@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hola Mundo</title>
+    </head>
+    <body>
+        <h1>Hola Mundo</h1>
+        <h2></h2>
+        <table style="border: 1px solid;">
+            <thead >
+                <tr>
+                    <th style="text-align: left;">ID</th>
+                    <th style="text-align: left;">NAME</th>
+                    <td></td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Rafa Vales</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Marianito</td>
+                    <td></td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <td><input></td>
+                <td><input></td>
+                <td><button onclick='add()'>ADD</button></td>
+            </tfoot>
+        </table>
+        <script>
+            alert("Rafa tonto")
+            window.onload = () => {
+                document.getElementsByTagName('input')[0].focus()
+            }
+
+            function add(){
+                var a = document.getElementsByTagName("input")[0].value
+                var b = document.getElementsByTagName("input")[1].value
+
+               var table = document.getElementsByTagName("tbody")[0]
+               var row = table.insertRow()
+               var cell = row.insertCell()
+               cell.innerHTML = a
+               cell = row.insertCell()
+               cell.innerHTML= b
+            }
+
+            function clear (){
+                document.getElementsByTagName("input")[0].value = ''
+                document.getElementsByTagName("input")[1].value = ''    
+
+            }
+
+        </script>
+    </body>
+</html>
